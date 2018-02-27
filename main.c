@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 #endif
 
     openlog(argv[0],LOG_NDELAY|LOG_PID,LOG_DAEMON);
-    cwd=(char*)get_current_dir_name();
+    cwd=get_current_dir_name();
     strcpy(tmpcwd,cwd);
     strcat(tmpcwd,"/");
     /* parse argv */
