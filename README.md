@@ -41,7 +41,9 @@ To run twebs:
         https://127.0.0.1:6666/getAuth.html
         https://127.0.0.1:6666/postAuth.html
 
+
 Files:
+
     cert.pem            ->  the https CA,use openssl to create, so you must accept the CA to continue
     cgi-bin             ->  cgi script directory
         getAuth.c       ->  the get method cgi script
@@ -61,6 +63,7 @@ Files:
     webserver.sh        ->  a shell script, to provide start/stop/restart/status the twebs e.g. webserver.sh start/stop/restart/status
     wrap.c              ->  must functions wrap file
     wrap.h              ->  the wrap.c's head file
+
 
 Bugs:
     If openssl lib library isn't accessible in your computer, you should change the Makefile.
