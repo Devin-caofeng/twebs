@@ -1,0 +1,193 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Accept	wrap.c	/^int Accept(int s, struct sockaddr *addr, socklen_t *addrlen)$/;"	f
+Bind	wrap.c	/^void Bind(int sockfd, struct sockaddr *my_addr, int addrlen)$/;"	f
+CC	Makefile	/^CC = gcc$/;"	m
+CC	cgi-bin/Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-I.\/ -g$/;"	m
+CFLAGS	cgi-bin/Makefile	/^CFLAGS = -O2 -Wall -I ..$/;"	m
+Close	wrap.c	/^void Close(int fd)$/;"	f
+Connect	wrap.c	/^void Connect(int sockfd, struct sockaddr *serv_addr, int addrlen)$/;"	f
+DEFAULT_CERTFILE	doc/back.c	5;"	d	file:
+DEF_MODE	wrap.h	32;"	d
+DEF_UMASK	wrap.h	33;"	d
+Daemon	wrap.c	/^int Daemon(int nochdir, int noclose)$/;"	f
+Dup2	wrap.c	/^int Dup2(int fd1, int fd2)$/;"	f
+Execve	wrap.c	/^void Execve(const char *filename, char *const argv[], char *const envp[])$/;"	f
+Fchown	wrap.c	/^int Fchown(int fd, uid_t owner, gid_t group)$/;"	f
+Fclose	wrap.c	/^void Fclose(FILE *fp)$/;"	f
+Fopen	wrap.c	/^FILE *Fopen(const char *filename, const char *mode)$/;"	f
+Fork	wrap.c	/^pid_t Fork(void)$/;"	f
+Fputs	wrap.c	/^void Fputs(const char *ptr, FILE *stream)$/;"	f
+Fread	wrap.c	/^size_t Fread(void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+Fwrite	wrap.c	/^void Fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+Getconfig	parse_config.c	/^char* Getconfig(const char* name)$/;"	f
+Gethostbyaddr	wrap.c	/^struct hostent *Gethostbyaddr(const char *addr, int len, int type)$/;"	f
+Gethostbyname	wrap.c	/^struct hostent *Gethostbyname(const char *name)$/;"	f
+Getpwnam	wrap.c	/^struct passwd *Getpwnam(const char *name)$/;"	f
+Initgroups	wrap.c	/^int Initgroups(const char *user, gid_t group)$/;"	f
+Kill	wrap.c	/^void Kill(pid_t pid, int signum)$/;"	f
+LIBS	Makefile	/^LIBS=-DHTTPS -lpthread -lssl -lcrypto$/;"	m
+LISTENQ	wrap.h	55;"	d
+Listen	wrap.c	/^void Listen(int s, int backlog)$/;"	f
+MAXBUF	wrap.h	54;"	d
+MAXLINE	wrap.h	53;"	d
+MAXLINELEN	parse.h	40;"	d
+Mmap	wrap.c	/^void *Mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset)$/;"	f
+Munmap	wrap.c	/^void Munmap(void *start, size_t length)$/;"	f
+Open	wrap.c	/^int Open(const char *pathname, int flags, mode_t mode)$/;"	f
+Open_clientfd	wrap.c	/^int Open_clientfd(char *hostname, int port)$/;"	f
+Open_listenfd	wrap.c	/^int Open_listenfd(int port)$/;"	f
+PID_FILE	doc/dir/back_main.c	4;"	d	file:
+PID_FILE	http_main.c	4;"	d	file:
+PID_FILE	main.c	4;"	d	file:
+Pipe	wrap.c	/^int Pipe(int pipefd[2])$/;"	f
+RIO_BUFSIZE	wrap.h	40;"	d
+Read	wrap.c	/^ssize_t Read(int fd, void *buf, size_t count)$/;"	f
+Rio_readinitb	wrap.c	/^void Rio_readinitb(rio_t *rp, int fd)$/;"	f
+Rio_readlineb	wrap.c	/^ssize_t Rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)$/;"	f
+Rio_readn	wrap.c	/^ssize_t Rio_readn(int fd, void *ptr, size_t nbytes)$/;"	f
+Rio_readnb	wrap.c	/^ssize_t Rio_readnb(rio_t *rp, void *usrbuf, size_t n)$/;"	f
+Rio_writen	wrap.c	/^void Rio_writen(int fd, void *usrbuf, size_t n)$/;"	f
+SA	wrap.h	/^typedef struct sockaddr SA;$/;"	t	typeref:struct:sockaddr
+Setgid	wrap.c	/^int Setgid(gid_t gid)$/;"	f
+Setgroups	wrap.c	/^int Setgroups(size_t size, const gid_t *list)$/;"	f
+Setsockopt	wrap.c	/^void Setsockopt(int s, int level, int optname, const void *optval, int optlen)$/;"	f
+Setuid	wrap.c	/^int Setuid(uid_t uid)$/;"	f
+Sigaddset	wrap.c	/^void Sigaddset(sigset_t *set, int signum)$/;"	f
+Sigdelset	wrap.c	/^void Sigdelset(sigset_t *set, int signum)$/;"	f
+Sigemptyset	wrap.c	/^void Sigemptyset(sigset_t *set)$/;"	f
+Sigfillset	wrap.c	/^void Sigfillset(sigset_t *set)$/;"	f
+Sigismember	wrap.c	/^int Sigismember(const sigset_t *set, int signum)$/;"	f
+Signal	wrap.c	/^handler_t *Signal(int signum, handler_t *handler)$/;"	f
+Sigprocmask	wrap.c	/^void Sigprocmask(int how, const sigset_t *set, sigset_t *oldset)$/;"	f
+Sleep	wrap.c	/^unsigned int Sleep(unsigned int secs)$/;"	f
+Socket	wrap.c	/^int Socket(int domain, int type, int protocol)$/;"	f
+Stat	wrap.c	/^void Stat(const char *filename, struct stat *buf)$/;"	f
+Wait	wrap.c	/^pid_t Wait(int *status)$/;"	f
+Waitpid	wrap.c	/^pid_t Waitpid(pid_t pid, int *iptr, int options)$/;"	f
+Write	wrap.c	/^ssize_t Write(int fd, const void *buf, size_t count)$/;"	f
+_PARSE_CONFIG_H	parse.h	2;"	d
+__WRAP_H__	wrap.h	2;"	d
+access_ornot	secure_access.c	/^int access_ornot(const char *destip) \/\/ 0 -> not 1 -> ok$/;"	f
+certfile	doc/back.c	/^static char* certfile;$/;"	v	file:
+certfile	doc/dir/back_main.c	/^static char* certfile;$/;"	v	file:
+certfile	main.c	/^static char* certfile;$/;"	v	file:
+clienterror	doc/back.c	/^void clienterror(int fd, char *cause, char *errnum, $/;"	f
+clienterror	doc/dir/back_main.c	/^static void clienterror(int fd, char *cause, char *errnum, $/;"	f	file:
+clienterror	doc/dir/main.c	/^void clienterror(int fd, char *cause, char *errnum, $/;"	f
+clienterror	main.c	/^static void clienterror(int fd, const char *cause, const char *errnum,$/;"	f	file:
+configfp	parse_config.c	/^FILE *configfp=NULL;$/;"	v
+cwd	doc/back.c	/^char* cwd;$/;"	v
+cwd	doc/dir/back_main.c	/^char* cwd;$/;"	v
+cwd	doc/dir/main.c	/^char *cwd;$/;"	v
+cwd	http_main.c	/^char *cwd = NULL;$/;"	v
+cwd	main.c	/^char* cwd;$/;"	v
+dns_error	wrap.c	/^void dns_error(char *msg) \/* dns-style error *\/$/;"	f
+doit	doc/back.c	/^void doit(int fd) $/;"	f
+doit	doc/dir/back_main.c	/^static void doit(int fd) $/;"	f	file:
+doit	doc/dir/main.c	/^void doit(int fd) $/;"	f
+doit	main.c	/^static void doit(int fd)$/;"	f	file:
+get_dynamic	doc/back.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
+get_dynamic	doc/dir/back_main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
+get_dynamic	doc/dir/main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
+get_dynamic	main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs)$/;"	f
+get_filetype	doc/back.c	/^void get_filetype(char *filename, char *filetype) $/;"	f
+get_filetype	doc/dir/back_main.c	/^static void get_filetype(const char *filename, char *filetype) $/;"	f	file:
+get_filetype	doc/dir/main.c	/^void get_filetype(char *filename, char *filetype) $/;"	f
+get_filetype	main.c	/^static void get_filetype(const char *filename, char *filetype)$/;"	f	file:
+get_requesthdrs	doc/back.c	/^void get_requesthdrs(rio_t *rp) $/;"	f
+get_requesthdrs	doc/dir/back_main.c	/^static void get_requesthdrs(rio_t *rp) $/;"	f	file:
+get_requesthdrs	doc/dir/main.c	/^void get_requesthdrs(rio_t *rp) $/;"	f
+get_requesthdrs	main.c	/^static void get_requesthdrs(rio_t *rp)$/;"	f	file:
+getconfig	parse_config.c	/^static char* getconfig(const char* name)$/;"	f	file:
+getfp	parse_config.c	/^static FILE *getfp(char *path)$/;"	f	file:
+getmonth	log.c	/^static int getmonth(struct tm* local)   \/\/ return month index ,eg. Oct->10$/;"	f	file:
+handler_t	wrap.h	/^typedef void handler_t(int);$/;"	t
+https_getlength	doc/back.c	/^void https_getlength(char* buf,int* length)$/;"	f
+https_getlength	doc/dir/back_main.c	/^static void https_getlength(char* buf,int* length)$/;"	f	file:
+https_getlength	main.c	/^static void https_getlength(char* buf,int* length)$/;"	f	file:
+httpspostdata	doc/dir/back_main.c	/^static char httpspostdata[MAXLINE];$/;"	v	file:
+httpspostdata	main.c	/^static char httpspostdata[MAXLINE];$/;"	v	file:
+init_daemon	daemon_init.c	/^void init_daemon(void)$/;"	f
+initlog	log.c	/^void initlog(const char* logp)$/;"	f
+ipadd_to_longlong	secure_access.c	/^static long long ipadd_to_longlong(const char *ip)$/;"	f	file:
+isShowdir	doc/back.c	/^static int isShowdir=1;$/;"	v	file:
+isShowdir	doc/dir/back_main.c	/^static int isShowdir=1;$/;"	v	file:
+isShowdir	doc/dir/main.c	/^static int isShowdir=1;$/;"	v	file:
+isShowdir	main.c	/^static int isShowdir=1;$/;"	v	file:
+is_show_dir	http_main.c	/^static int is_show_dir = 1;$/;"	v	file:
+ishttps	doc/back.c	/^static int ishttps=0;$/;"	v	file:
+ishttps	doc/dir/back_main.c	/^static int ishttps=0;$/;"	v	file:
+ishttps	main.c	/^static int  ishttps=0;$/;"	v	file:
+logfp	log.c	/^FILE* logfp=NULL;$/;"	v
+main	cgi-bin/getAuth.c	/^int main(void) {$/;"	f
+main	cgi-bin/postAuth.c	/^int main(void) {$/;"	f
+main	doc/back.c	/^int main(int argc, char **argv) $/;"	f
+main	doc/dir/back_main.c	/^int main(int argc, char **argv) $/;"	f
+main	doc/dir/main.c	/^int main(int argc, char **argv) $/;"	f
+main	http_main.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	main.c	/^int main(int argc, char **argv)$/;"	f
+obj	Makefile	/^obj=$(patsubst %.c, %.o, $(src))$/;"	m
+open_clientfd	wrap.c	/^int open_clientfd(char *hostname, int port)$/;"	f
+open_listenfd	wrap.c	/^int open_listenfd(int port)$/;"	f
+parse_option	parse_option.c	/^void parse_option(int argc,char **argv,char* d,char** portp,char **logp,char** sslp,char* dossl)$/;"	f
+parse_uri	doc/back.c	/^int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f
+parse_uri	doc/dir/back_main.c	/^static int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f	file:
+parse_uri	doc/dir/main.c	/^int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f
+parse_uri	main.c	/^static int parse_uri(char *uri, char *filename, char *cgiargs)$/;"	f	file:
+post_dynamic	doc/back.c	/^void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f
+post_dynamic	doc/dir/back_main.c	/^static void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f	file:
+post_dynamic	doc/dir/main.c	/^void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f
+post_dynamic	main.c	/^static void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f	file:
+post_requesthdrs	doc/back.c	/^void post_requesthdrs(rio_t *rp,int *length) $/;"	f
+post_requesthdrs	doc/dir/back_main.c	/^static void post_requesthdrs(rio_t *rp,int *length) $/;"	f	file:
+post_requesthdrs	doc/dir/main.c	/^void post_requesthdrs(rio_t *rp,int *length) $/;"	f
+post_requesthdrs	main.c	/^static void post_requesthdrs(rio_t *rp,int *length)$/;"	f	file:
+rio_buf	wrap.h	/^    char rio_buf[RIO_BUFSIZE]; \/* internal buffer *\/$/;"	m	struct:__anon1
+rio_bufptr	wrap.h	/^    char *rio_bufptr;          \/* next unread byte in internal buf *\/$/;"	m	struct:__anon1
+rio_cnt	wrap.h	/^    int rio_cnt;               \/* unread bytes in internal buf *\/$/;"	m	struct:__anon1
+rio_fd	wrap.h	/^    int rio_fd;                \/* descriptor for this internal buf *\/$/;"	m	struct:__anon1
+rio_read	wrap.c	/^static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t n)$/;"	f	file:
+rio_readinitb	wrap.c	/^void rio_readinitb(rio_t *rp, int fd)$/;"	f
+rio_readlineb	wrap.c	/^ssize_t rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)$/;"	f
+rio_readn	wrap.c	/^ssize_t rio_readn(int fd, void *usrbuf, size_t n)$/;"	f
+rio_readnb	wrap.c	/^ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t n)$/;"	f
+rio_t	wrap.h	/^} rio_t;$/;"	t	typeref:struct:__anon1
+rio_writen	wrap.c	/^ssize_t rio_writen(int fd, void *usrbuf, size_t n)$/;"	f
+run	webserver.sh	/^run()$/;"	f
+serve_dir	doc/back.c	/^void serve_dir(int fd,char *filename)$/;"	f
+serve_dir	doc/dir/back_main.c	/^static void serve_dir(int fd,char *filename)$/;"	f	file:
+serve_dir	doc/dir/main.c	/^void serve_dir(int fd,char *filename)$/;"	f
+serve_dir	main.c	/^static void serve_dir(int fd,char *filename)$/;"	f	file:
+serve_static	doc/back.c	/^void serve_static(int fd, char *filename, int filesize) $/;"	f
+serve_static	doc/dir/back_main.c	/^static void serve_static(int fd, char *filename, int filesize) $/;"	f	file:
+serve_static	doc/dir/main.c	/^void serve_static(int fd, char *filename, int filesize) $/;"	f
+serve_static	main.c	/^static void serve_static(int fd, char *filename, int filesize)$/;"	f	file:
+sigChldHandler	doc/dir/back_main.c	/^static void sigChldHandler(int signo)$/;"	f	file:
+sigChldHandler	main.c	/^static void sigChldHandler(int signo)$/;"	f	file:
+src	Makefile	/^src=$(wildcard *.c)$/;"	m
+ssl	doc/back.c	/^static SSL* ssl;$/;"	v	file:
+ssl	doc/dir/back_main.c	/^static SSL* ssl;$/;"	v	file:
+ssl	main.c	/^static SSL* ssl;$/;"	v	file:
+ssl_ctx	doc/back.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
+ssl_ctx	doc/dir/back_main.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
+ssl_ctx	main.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
+ssl_init	doc/back.c	/^void ssl_init(void)$/;"	f
+ssl_init	doc/dir/back_main.c	/^static void ssl_init(void)$/;"	f	file:
+ssl_init	main.c	/^static void ssl_init(void)$/;"	f	file:
+start	webserver.sh	/^start()$/;"	f
+status	webserver.sh	/^status()$/;"	f
+stop	webserver.sh	/^stop()$/;"	f
+timeModify	log.c	/^char* timeModify(time_t timeval,char *time)$/;"	f
+unix_error	wrap.c	/^void unix_error(char *msg) \/* unix-style error *\/$/;"	f
+usage	parse_option.c	/^static void usage(void)$/;"	f	file:
+version	parse_option.c	/^static void version(void)$/;"	f	file:
+writePid	doc/dir/back_main.c	/^static void writePid(int option)$/;"	f	file:
+writePid	main.c	/^static void writePid(int option)$/;"	f	file:
+writelog	log.c	/^void writelog(const char* buf)$/;"	f
+writetime	log.c	/^void writetime()$/;"	f

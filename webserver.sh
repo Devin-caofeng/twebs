@@ -1,6 +1,6 @@
 #/bin/bash
 
-PName='webd'
+PName='twebs'
 Grep='grep'
 Echo='echo'
 Skill='skill'

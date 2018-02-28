@@ -20,14 +20,13 @@
 #include <openssl/err.h>
 #endif
 
-#define _GNU_SOURCE   //enable the getopt_long
 #include <getopt.h>
 
 /* daemon_init.c */
 void init_daemon(void);
 
 /* parse_config.c */
-char* Getconfig(char*);
+char* Getconfig(const char*);
 extern FILE *configfp;
 
 /*parse_option.c */

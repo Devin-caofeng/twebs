@@ -10,7 +10,7 @@ static FILE *getfp(char *path)
 }
 
 
-static char* getconfig(char* name)
+static char* getconfig(const char* name)
 {
 /*
 pointer meaning:
@@ -70,7 +70,7 @@ pointer meaning:
 		return NULL;
 }
 
-char* Getconfig(char* name)
+char* Getconfig(const char* name)
 {
 	char *p=getconfig(name);
 	if(p==NULL)
