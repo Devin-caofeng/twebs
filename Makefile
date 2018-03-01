@@ -1,5 +1,4 @@
 CC = gcc
-
 # CFLAGS = -I./ -g -Wall
 CFLAGS=-I./ -g
 LIBS=-DHTTPS -lpthread -lssl -lcrypto
