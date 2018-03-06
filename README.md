@@ -63,8 +63,3 @@ Files:
     webserver.sh        ->  a shell script, to provide start/stop/restart/status the twebs e.g. webserver.sh start/stop/restart/status
     wrap.c              ->  must functions wrap file
     wrap.h              ->  the wrap.c's head file
-
-
-Bugs:
-    If openssl lib library isn't accessible in your computer, you should change the Makefile.
-    For datail, you could see Makefile.
