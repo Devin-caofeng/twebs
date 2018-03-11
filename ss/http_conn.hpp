@@ -106,14 +106,14 @@ private:
     Method             method_;
 
     char               real_file_[FILENAME_LEN];
-    char              *url_;
-    char              *version_;
-    char              *host_;
+    char               *url_;
+    char               *version_;
+    char               *host_;
     int                content_length_;
     bool               linger_;
 
     // 客户请求的目标文件被 mmap 到内存中的其实位置
-    char              *file_addr_;
+    char               *file_addr_;
     struct stat        file_stat_;
     // 用 writev 来执行写操作，iv_count_ 表示被写内存块的数量
     struct             iovec iv_[2];

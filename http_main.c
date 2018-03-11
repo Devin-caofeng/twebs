@@ -106,7 +106,7 @@ static void doit(int fd) {
     }
 
     // parse uri from GET request
-    int is_static;
+    int  is_static;
     char filename[MAXLINE];
     char cgi_args[MAXLINE];
     is_static = parse_uri(uri, filename, cgi_args);
@@ -262,7 +262,8 @@ static void serve_dir(int fd, char *filename) {
     exit(0);
 }
 
-static void post_dynamic(int fd, char *filename, int content_length, rio_t *rp) {
+static void post_dynamic(int fd, char *filename,
+                         int content_length, rio_t *rp) {
     char length[32];
     sprintf(length, "%d", content_length);
 
@@ -358,11 +359,11 @@ static void serve_static(int fd, char *filename, int filesize) {
  * dirive file type from file name
  */
 static void get_filetype(const char *filename, char *filetype) {
-    if (strstr(filename, ".html"))     strcpy(filetype, "text/html");
-    else if (strstr(filename, ".gif")) strcpy(filetype, "image/gif");
-    else if (strstr(filename, ".jpg")) strcpy(filetype, "image/jpeg");
-    else if (strstr(filename, ".png")) strcpy(filetype, "image/png");
-    else                               strcpy(filetype, "text/plain");
+    if      (strstr(filename, ".html")) strcpy(filetype, "text/html");
+    else if (strstr(filename, ".gif"))  strcpy(filetype, "image/gif");
+    else if (strstr(filename, ".jpg"))  strcpy(filetype, "image/jpeg");
+    else if (strstr(filename, ".png"))  strcpy(filetype, "image/png");
+    else                                strcpy(filetype, "text/plain");
 }
 
 /*

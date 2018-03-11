@@ -4,20 +4,62 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Accept	ss/wrap.cpp	/^int Accept(int fd, struct sockaddr *sa, socklen_t *sa_len) {$/;"	f
 Accept	wrap.c	/^int Accept(int s, struct sockaddr *addr, socklen_t *addrlen)$/;"	f
+Add	ss/locker.hpp	/^    bool Add() { return sem_post(&sem_) == 0; }$/;"	f	class:SemLocker
+AddBlankLine	ss/http_conn.cpp	/^bool HttpConn::AddBlankLine() {$/;"	f	class:HttpConn
+AddContent	ss/http_conn.cpp	/^bool HttpConn::AddContent(const char *content) {$/;"	f	class:HttpConn
+AddContentLength	ss/http_conn.cpp	/^bool HttpConn::AddContentLength(int content_len) {$/;"	f	class:HttpConn
+AddFD	ss/http_conn.cpp	/^void AddFD(int epollfd, int fd, bool one_shot) {$/;"	f
+AddFD	ss/ww/process_pool.hpp	/^static void AddFD(int epollfd, int fd) {$/;"	f
+AddHeaders	ss/http_conn.cpp	/^bool HttpConn::AddHeaders(int content_len) {$/;"	f	class:HttpConn
+AddLinger	ss/http_conn.cpp	/^bool HttpConn::AddLinger() {$/;"	f	class:HttpConn
+AddResponse	ss/http_conn.cpp	/^bool HttpConn::AddResponse(const char *format, ...) {$/;"	f	class:HttpConn
+AddSig	ss/main.cpp	/^void AddSig(int sig, void(* Handler)(int), bool restart = true) {$/;"	f
+AddSig	ss/ww/process_pool.hpp	/^static void AddSig(int sig, void(*Handler)(int), bool restart = true) {$/;"	f
+AddStatusLine	ss/http_conn.cpp	/^bool HttpConn::AddStatusLine(int status, const char *title) {$/;"	f	class:HttpConn
+Append	ss/thread_pool.hpp	/^bool ThreadPool<T>::Append(T *request) {$/;"	f	class:ThreadPool
+BAD_REQEUST	ss/http_conn.hpp	/^        BAD_REQEUST,$/;"	e	enum:HttpConn::HttpCode
+BUF_SIZE	ss/cgi-bin/cgi_server.cpp	/^    static const int   BUF_SIZE = 1024;$/;"	m	class:CgiConn	file:
+BUF_SIZE	ss/ww/cgi_server.cpp	/^    static const int   BUF_SIZE = 1024;$/;"	m	class:CgiConn	file:
+Bind	ss/wrap.cpp	/^void Bind(int fd, const struct sockaddr *sa, socklen_t sa_len) {$/;"	f
 Bind	wrap.c	/^void Bind(int sockfd, struct sockaddr *my_addr, int addrlen)$/;"	f
+Broadcast	ss/locker.hpp	/^    bool Broadcast() { return pthread_cond_broadcast(&cond_) == 0; }$/;"	f	class:CondLocker
 CC	Makefile	/^CC = gcc$/;"	m
 CC	cgi-bin/Makefile	/^CC = gcc$/;"	m
+CC	ss/cgi-bin/Makefile	/^CC = gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS=-I.\/ -g$/;"	m
 CFLAGS	cgi-bin/Makefile	/^CFLAGS = -O2 -Wall -I ..$/;"	m
+CFLAGS	ss/cgi-bin/Makefile	/^CFLAGS = -O2 -Wall -I ..$/;"	m
+CHECK_STATE_CONTENT	ss/http_conn.hpp	/^        CHECK_STATE_CONTENT$/;"	e	enum:HttpConn::CheckState
+CHECK_STATE_HEADER	ss/http_conn.hpp	/^        CHECK_STATE_HEADER,$/;"	e	enum:HttpConn::CheckState
+CHECK_STATE_REQUESTLINE	ss/http_conn.hpp	/^        CHECK_STATE_REQUESTLINE = 0,$/;"	e	enum:HttpConn::CheckState
+CLOSED_CONNECTION	ss/http_conn.hpp	/^        CLOSED_CONNECTION$/;"	e	enum:HttpConn::HttpCode
+CONNECT	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+CgiConn	ss/cgi-bin/cgi_server.cpp	/^class CgiConn {$/;"	c	file:
+CgiConn	ss/ww/cgi_server.cpp	/^class CgiConn {$/;"	c	file:
+CheckState	ss/http_conn.hpp	/^    enum CheckState {$/;"	g	class:HttpConn
+Close	ss/wrap.cpp	/^void Close(int fd) {$/;"	f
 Close	wrap.c	/^void Close(int fd)$/;"	f
+CloseConn	ss/http_conn.cpp	/^void HttpConn::CloseConn(bool read_close) {$/;"	f	class:HttpConn
+CondLocker	ss/locker.hpp	/^    CondLocker() {$/;"	f	class:CondLocker
+CondLocker	ss/locker.hpp	/^class CondLocker {$/;"	c
+Connect	ss/wrap.cpp	/^void Connect(int fd, const struct sockaddr *sa, socklen_t sa_len) {$/;"	f
 Connect	wrap.c	/^void Connect(int sockfd, struct sockaddr *serv_addr, int addrlen)$/;"	f
-DEFAULT_CERTFILE	doc/back.c	5;"	d	file:
+CoreProcess	ss/cgi-bin/cgi_server.cpp	/^int CgiConn::CoreProcess(int ret, int idx) {$/;"	f	class:CgiConn
+CoreProcess	ss/ww/cgi_server.cpp	/^int CgiConn::CoreProcess(int ret, int idx) {$/;"	f	class:CgiConn
+CoreRunChild	ss/ww/process_pool.hpp	/^void ProcessPool<T>::CoreRunChild(const struct epoll_event *events,$/;"	f	class:ProcessPool
+Create	ss/ww/process_pool.hpp	/^    static ProcessPool<T> *Create(int listenfd, int process_number = 8) {$/;"	f	class:ProcessPool
 DEF_MODE	wrap.h	32;"	d
 DEF_UMASK	wrap.h	33;"	d
+DELETE	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
 Daemon	wrap.c	/^int Daemon(int nochdir, int noclose)$/;"	f
+DoRequest	ss/http_conn.cpp	/^HttpConn::HttpCode HttpConn::DoRequest() {$/;"	f	class:HttpConn
 Dup2	wrap.c	/^int Dup2(int fd1, int fd2)$/;"	f
 Execve	wrap.c	/^void Execve(const char *filename, char *const argv[], char *const envp[])$/;"	f
+FILENAME_LEN	ss/http_conn.hpp	/^    static const int FILENAME_LEN = 256;$/;"	m	class:HttpConn
+FILE_REQUEST	ss/http_conn.hpp	/^        FILE_REQUEST,$/;"	e	enum:HttpConn::HttpCode
+FORBIDDEN_REQUEST	ss/http_conn.hpp	/^        FORBIDDEN_REQUEST,$/;"	e	enum:HttpConn::HttpCode
 Fchown	wrap.c	/^int Fchown(int fd, uid_t owner, gid_t group)$/;"	f
 Fclose	wrap.c	/^void Fclose(FILE *fp)$/;"	f
 Fopen	wrap.c	/^FILE *Fopen(const char *filename, const char *mode)$/;"	f
@@ -25,133 +67,258 @@ Fork	wrap.c	/^pid_t Fork(void)$/;"	f
 Fputs	wrap.c	/^void Fputs(const char *ptr, FILE *stream)$/;"	f
 Fread	wrap.c	/^size_t Fread(void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
 Fwrite	wrap.c	/^void Fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)$/;"	f
+GET	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+GET_REQUEST	ss/http_conn.hpp	/^        GET_REQUEST,$/;"	e	enum:HttpConn::HttpCode
+GetLine	ss/http_conn.hpp	/^    char       *GetLine() { return read_buf_ + start_line_; }$/;"	f	class:HttpConn
 Getconfig	parse_config.c	/^char* Getconfig(const char* name)$/;"	f
 Gethostbyaddr	wrap.c	/^struct hostent *Gethostbyaddr(const char *addr, int len, int type)$/;"	f
 Gethostbyname	wrap.c	/^struct hostent *Gethostbyname(const char *name)$/;"	f
 Getpwnam	wrap.c	/^struct passwd *Getpwnam(const char *name)$/;"	f
+HEAD	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+HTTP_CONNECTION_HPP_	ss/http_conn.hpp	2;"	d
+HttpCode	ss/http_conn.hpp	/^    enum HttpCode {$/;"	g	class:HttpConn
+HttpConn	ss/http_conn.hpp	/^class HttpConn {$/;"	c
+INTERNAL_ERROR	ss/http_conn.hpp	/^        INTERNAL_ERROR,$/;"	e	enum:HttpConn::HttpCode
+Init	ss/cgi-bin/cgi_server.cpp	/^void CgiConn::Init(int epollfd, int sockfd, const sockaddr_in &cli_addr) {$/;"	f	class:CgiConn
+Init	ss/http_conn.cpp	/^void HttpConn::Init() {$/;"	f	class:HttpConn
+Init	ss/http_conn.cpp	/^void HttpConn::Init(int sockfd, const struct sockaddr_in &addr) {$/;"	f	class:HttpConn
+Init	ss/ww/cgi_server.cpp	/^void CgiConn::Init(int epollfd, int sockfd, const sockaddr_in &cli_addr) {$/;"	f	class:CgiConn
 Initgroups	wrap.c	/^int Initgroups(const char *user, gid_t group)$/;"	f
 Kill	wrap.c	/^void Kill(pid_t pid, int signum)$/;"	f
 LIBS	Makefile	/^LIBS=-DHTTPS -lpthread -lssl -lcrypto$/;"	m
+LINE_BAD	ss/http_conn.hpp	/^    enum LineStatus { LINE_OK = 0, LINE_BAD, LINE_OPEN };$/;"	e	enum:HttpConn::LineStatus
+LINE_OK	ss/http_conn.hpp	/^    enum LineStatus { LINE_OK = 0, LINE_BAD, LINE_OPEN };$/;"	e	enum:HttpConn::LineStatus
+LINE_OPEN	ss/http_conn.hpp	/^    enum LineStatus { LINE_OK = 0, LINE_BAD, LINE_OPEN };$/;"	e	enum:HttpConn::LineStatus
 LISTENQ	wrap.h	55;"	d
+LOCKER_HPP_	ss/locker.hpp	2;"	d
+LineStatus	ss/http_conn.hpp	/^    enum LineStatus { LINE_OK = 0, LINE_BAD, LINE_OPEN };$/;"	g	class:HttpConn
+Listen	ss/wrap.cpp	/^void Listen(int fd, int backlog) {$/;"	f
 Listen	wrap.c	/^void Listen(int s, int backlog)$/;"	f
 MAXBUF	wrap.h	54;"	d
 MAXLINE	wrap.h	53;"	d
 MAXLINELEN	parse.h	40;"	d
+MAX_EVENT_NUMBER	ss/ww/process_pool.hpp	/^    static const int MAX_EVENT_NUMBER = 10000;$/;"	m	class:ProcessPool
+MAX_PROCESS_NUMBER	ss/ww/process_pool.hpp	/^    static const int MAX_PROCESS_NUMBER = 16;$/;"	m	class:ProcessPool
+Method	ss/http_conn.hpp	/^    enum Method {$/;"	g	class:HttpConn
 Mmap	wrap.c	/^void *Mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset)$/;"	f
+ModFD	ss/http_conn.cpp	/^void ModFD(int epollfd, int fd, int ev) {$/;"	f
 Munmap	wrap.c	/^void Munmap(void *start, size_t length)$/;"	f
+MutexLock	ss/locker.hpp	/^    bool MutexLock() { return pthread_mutex_lock(&mutex_) == 0; }$/;"	f	class:MutexLocker
+MutexLocker	ss/locker.hpp	/^    MutexLocker() {$/;"	f	class:MutexLocker
+MutexLocker	ss/locker.hpp	/^class MutexLocker {$/;"	c
+MutexUnlock	ss/locker.hpp	/^    bool MutexUnlock() { return pthread_mutex_unlock(&mutex_) == 0; }$/;"	f	class:MutexLocker
+MyRead	ss/wrap.cpp	/^static ssize_t MyRead(int fd, char *ptr) {$/;"	f	file:
+NO_REQUEST	ss/http_conn.hpp	/^        NO_REQUEST = 0,$/;"	e	enum:HttpConn::HttpCode
+NO_RESOURCE	ss/http_conn.hpp	/^        NO_RESOURCE,$/;"	e	enum:HttpConn::HttpCode
+OPTIONS	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+OUT	ss/ww/process_pool.hpp	20;"	d
 Open	wrap.c	/^int Open(const char *pathname, int flags, mode_t mode)$/;"	f
 Open_clientfd	wrap.c	/^int Open_clientfd(char *hostname, int port)$/;"	f
 Open_listenfd	wrap.c	/^int Open_listenfd(int port)$/;"	f
+PATCK	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
 PID_FILE	doc/dir/back_main.c	4;"	d	file:
 PID_FILE	http_main.c	4;"	d	file:
-PID_FILE	main.c	4;"	d	file:
+POST	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+PROCESS_POOL_HPP_	ss/ww/process_pool.hpp	2;"	d
+PUT	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+ParseContent	ss/http_conn.cpp	/^HttpConn::HttpCode HttpConn::ParseContent(char *text) {$/;"	f	class:HttpConn
+ParseHeaders	ss/http_conn.cpp	/^HttpConn::HttpCode HttpConn::ParseHeaders(char *text) {$/;"	f	class:HttpConn
+ParseLine	ss/http_conn.cpp	/^HttpConn::LineStatus HttpConn::ParseLine() {$/;"	f	class:HttpConn
+ParseRequestLine	ss/http_conn.cpp	/^HttpConn::HttpCode HttpConn::ParseRequestLine(char *text) {$/;"	f	class:HttpConn
+PerrAndExit	ss/wrap.cpp	/^void PerrAndExit(const char *remind) {$/;"	f
 Pipe	wrap.c	/^int Pipe(int pipefd[2])$/;"	f
+Process	ss/cgi-bin/cgi_server.cpp	/^void CgiConn::Process() {$/;"	f	class:CgiConn
+Process	ss/http_conn.cpp	/^void HttpConn::Process() {$/;"	f	class:HttpConn
+Process	ss/ww/cgi_server.cpp	/^void CgiConn::Process() {$/;"	f	class:CgiConn
+Process	ss/ww/process_pool.hpp	/^    Process() : pid_(-1) { }$/;"	f	class:Process
+Process	ss/ww/process_pool.hpp	/^class Process {$/;"	c
+ProcessNewConnInChild	ss/ww/process_pool.hpp	/^int ProcessPool<T>::ProcessNewConnInChild(int sockfd, T *const users) {$/;"	f	class:ProcessPool
+ProcessNewConnInParent	ss/ww/process_pool.hpp	/^void ProcessPool<T>::ProcessNewConnInParent(int &sub_process_counter) {$/;"	f	class:ProcessPool
+ProcessPool	ss/ww/process_pool.hpp	/^ProcessPool<T>::ProcessPool(int listenfd, int process_number)$/;"	f	class:ProcessPool
+ProcessPool	ss/ww/process_pool.hpp	/^class ProcessPool {$/;"	c
+ProcessRead	ss/http_conn.cpp	/^HttpConn::HttpCode HttpConn::ProcessRead() {$/;"	f	class:HttpConn
+ProcessSigInChild	ss/ww/process_pool.hpp	/^int ProcessPool<T>::ProcessSigInChild() {$/;"	f	class:ProcessPool
+ProcessSigInParent	ss/ww/process_pool.hpp	/^void ProcessPool<T>::ProcessSigInParent() {$/;"	f	class:ProcessPool
+ProcessWrite	ss/http_conn.cpp	/^bool HttpConn::ProcessWrite(HttpCode ret) {$/;"	f	class:HttpConn
+ProcessWriteCommon	ss/http_conn.cpp	/^bool HttpConn::ProcessWriteCommon(int num, const char *title,$/;"	f	class:HttpConn
+READ_BUF_SIZE	ss/http_conn.hpp	/^    static const int READ_BUF_SIZE = 4096;$/;"	m	class:HttpConn
 RIO_BUFSIZE	wrap.h	40;"	d
+Read	ss/http_conn.cpp	/^bool HttpConn::Read() {$/;"	f	class:HttpConn
+Read	ss/wrap.cpp	/^ssize_t Read(int fd, void *ptr, size_t nbytes) {$/;"	f
 Read	wrap.c	/^ssize_t Read(int fd, void *buf, size_t count)$/;"	f
+ReadLine	ss/wrap.cpp	/^size_t ReadLine(int fd, void *vptr, ssize_t max_len) {$/;"	f
+ReadN	ss/wrap.cpp	/^ssize_t ReadN(int fd, const void *vptr, size_t n) {$/;"	f
+Recv	ss/wrap.cpp	/^ssize_t Recv(int fd, void *buf, ssize_t len, int flags) {$/;"	f
+RemoveFD	ss/http_conn.cpp	/^void RemoveFD(int epollfd, int fd) {$/;"	f
+RemoveFD	ss/ww/process_pool.hpp	/^static void RemoveFD(int epollfd, int fd) {$/;"	f
 Rio_readinitb	wrap.c	/^void Rio_readinitb(rio_t *rp, int fd)$/;"	f
 Rio_readlineb	wrap.c	/^ssize_t Rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)$/;"	f
 Rio_readn	wrap.c	/^ssize_t Rio_readn(int fd, void *ptr, size_t nbytes)$/;"	f
 Rio_readnb	wrap.c	/^ssize_t Rio_readnb(rio_t *rp, void *usrbuf, size_t n)$/;"	f
 Rio_writen	wrap.c	/^void Rio_writen(int fd, void *usrbuf, size_t n)$/;"	f
+Run	ss/thread_pool.hpp	/^void ThreadPool<T>::Run() {$/;"	f	class:ThreadPool
+Run	ss/ww/process_pool.hpp	/^void ProcessPool<T>::Run() {$/;"	f	class:ProcessPool
+RunChild	ss/ww/process_pool.hpp	/^void ProcessPool<T>::RunChild() {$/;"	f	class:ProcessPool
+RunParent	ss/ww/process_pool.hpp	/^void ProcessPool<T>::RunParent() {$/;"	f	class:ProcessPool
 SA	wrap.h	/^typedef struct sockaddr SA;$/;"	t	typeref:struct:sockaddr
+SemLocker	ss/locker.hpp	/^    SemLocker() {$/;"	f	class:SemLocker
+SemLocker	ss/locker.hpp	/^class SemLocker {$/;"	c
+Send	ss/wrap.cpp	/^ssize_t Send(int fd, const void *buf, ssize_t len, int flags) {$/;"	f
+SetNonblocking	ss/http_conn.cpp	/^int SetNonblocking(int fd) {$/;"	f
+SetNonblocking	ss/ww/process_pool.hpp	/^static int SetNonblocking(int fd) {$/;"	f
 Setgid	wrap.c	/^int Setgid(gid_t gid)$/;"	f
 Setgroups	wrap.c	/^int Setgroups(size_t size, const gid_t *list)$/;"	f
 Setsockopt	wrap.c	/^void Setsockopt(int s, int level, int optname, const void *optval, int optlen)$/;"	f
 Setuid	wrap.c	/^int Setuid(uid_t uid)$/;"	f
+SetupSigPipe	ss/ww/process_pool.hpp	/^void ProcessPool<T>::SetupSigPipe() {$/;"	f	class:ProcessPool
+ShowError	ss/main.cpp	/^void ShowError(int connfd, const char *info) {$/;"	f
+SigHandler	ss/ww/process_pool.hpp	/^static void SigHandler(int sig) {$/;"	f
 Sigaddset	wrap.c	/^void Sigaddset(sigset_t *set, int signum)$/;"	f
 Sigdelset	wrap.c	/^void Sigdelset(sigset_t *set, int signum)$/;"	f
 Sigemptyset	wrap.c	/^void Sigemptyset(sigset_t *set)$/;"	f
 Sigfillset	wrap.c	/^void Sigfillset(sigset_t *set)$/;"	f
 Sigismember	wrap.c	/^int Sigismember(const sigset_t *set, int signum)$/;"	f
+Signal	ss/locker.hpp	/^    bool Signal() { return pthread_cond_signal(&cond_) == 0; }$/;"	f	class:CondLocker
 Signal	wrap.c	/^handler_t *Signal(int signum, handler_t *handler)$/;"	f
 Sigprocmask	wrap.c	/^void Sigprocmask(int how, const sigset_t *set, sigset_t *oldset)$/;"	f
 Sleep	wrap.c	/^unsigned int Sleep(unsigned int secs)$/;"	f
+Socket	ss/wrap.cpp	/^int Socket(int family, int type, int protocol) {$/;"	f
 Socket	wrap.c	/^int Socket(int domain, int type, int protocol)$/;"	f
 Stat	wrap.c	/^void Stat(const char *filename, struct stat *buf)$/;"	f
+THREAD_POOL_HPP_	ss/thread_pool.hpp	2;"	d
+TRACE	ss/http_conn.hpp	/^        GET = 0, POST, HEAD, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCK$/;"	e	enum:HttpConn::Method
+ThreadPool	ss/thread_pool.hpp	/^ThreadPool<T>::ThreadPool(int thread_number, int max_requests)$/;"	f	class:ThreadPool
+ThreadPool	ss/thread_pool.hpp	/^class ThreadPool {$/;"	c
+USER_PER_PROCESS	ss/ww/process_pool.hpp	/^    static const int USER_PER_PROCESS = 65536;$/;"	m	class:ProcessPool
+Unmap	ss/http_conn.cpp	/^void HttpConn::Unmap() {$/;"	f	class:HttpConn
+WRAP_HPP_	ss/wrap.hpp	2;"	d
+WRITE_BUF_SIZE	ss/http_conn.hpp	/^    static const int WRITE_BUF_SIZE = 2048;$/;"	m	class:HttpConn
+Wait	ss/locker.hpp	/^    bool Wait() { return sem_wait(&sem_) == 0; }$/;"	f	class:SemLocker
+Wait	ss/locker.hpp	/^    bool Wait() {$/;"	f	class:CondLocker
 Wait	wrap.c	/^pid_t Wait(int *status)$/;"	f
 Waitpid	wrap.c	/^pid_t Waitpid(pid_t pid, int *iptr, int options)$/;"	f
+Worker	ss/thread_pool.hpp	/^void *ThreadPool<T>::Worker(void *arg) {$/;"	f	class:ThreadPool
+Write	ss/http_conn.cpp	/^bool HttpConn::Write() {$/;"	f	class:HttpConn
+Write	ss/wrap.cpp	/^ssize_t Write(int fd, const void *ptr, size_t nbytes) {$/;"	f
 Write	wrap.c	/^ssize_t Write(int fd, const void *buf, size_t count)$/;"	f
+WriteN	ss/wrap.cpp	/^ssize_t WriteN(int fd, const void *vptr, size_t n) {$/;"	f
 _PARSE_CONFIG_H	parse.h	2;"	d
 __WRAP_H__	wrap.h	2;"	d
 access_ornot	secure_access.c	/^int access_ornot(const char *destip) \/\/ 0 -> not 1 -> ok$/;"	f
-certfile	doc/back.c	/^static char* certfile;$/;"	v	file:
+addr_	ss/cgi-bin/cgi_server.cpp	/^    struct sockaddr_in addr_;$/;"	m	class:CgiConn	typeref:struct:CgiConn::sockaddr_in	file:
+addr_	ss/http_conn.hpp	/^    struct sockaddr_in addr_;$/;"	m	class:HttpConn	typeref:struct:HttpConn::sockaddr_in
+addr_	ss/ww/cgi_server.cpp	/^    struct sockaddr_in addr_;$/;"	m	class:CgiConn	typeref:struct:CgiConn::sockaddr_in	file:
+buf_	ss/cgi-bin/cgi_server.cpp	/^    char               buf_[BUF_SIZE];$/;"	m	class:CgiConn	file:
+buf_	ss/ww/cgi_server.cpp	/^    char               buf_[BUF_SIZE];$/;"	m	class:CgiConn	file:
 certfile	doc/dir/back_main.c	/^static char* certfile;$/;"	v	file:
-certfile	main.c	/^static char* certfile;$/;"	v	file:
-clienterror	doc/back.c	/^void clienterror(int fd, char *cause, char *errnum, $/;"	f
+check_state_	ss/http_conn.hpp	/^    CheckState         check_state_;$/;"	m	class:HttpConn
+checked_idx_	ss/http_conn.hpp	/^    int                checked_idx_;$/;"	m	class:HttpConn
+client_error	http_main.c	/^static void client_error(int fd, const char *cause, const char *err_num,$/;"	f	file:
 clienterror	doc/dir/back_main.c	/^static void clienterror(int fd, char *cause, char *errnum, $/;"	f	file:
 clienterror	doc/dir/main.c	/^void clienterror(int fd, char *cause, char *errnum, $/;"	f
-clienterror	main.c	/^static void clienterror(int fd, const char *cause, const char *errnum,$/;"	f	file:
+cond_	ss/locker.hpp	/^    pthread_cond_t  cond_;$/;"	m	class:CondLocker
 configfp	parse_config.c	/^FILE *configfp=NULL;$/;"	v
-cwd	doc/back.c	/^char* cwd;$/;"	v
+content_length_	ss/http_conn.hpp	/^    int                content_length_;$/;"	m	class:HttpConn
 cwd	doc/dir/back_main.c	/^char* cwd;$/;"	v
 cwd	doc/dir/main.c	/^char *cwd;$/;"	v
 cwd	http_main.c	/^char *cwd = NULL;$/;"	v
-cwd	main.c	/^char* cwd;$/;"	v
 dns_error	wrap.c	/^void dns_error(char *msg) \/* dns-style error *\/$/;"	f
-doit	doc/back.c	/^void doit(int fd) $/;"	f
+doc_root	ss/http_conn.cpp	/^const char *doc_root = "\/www\/html";$/;"	v
 doit	doc/dir/back_main.c	/^static void doit(int fd) $/;"	f	file:
 doit	doc/dir/main.c	/^void doit(int fd) $/;"	f
-doit	main.c	/^static void doit(int fd)$/;"	f	file:
-get_dynamic	doc/back.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
+doit	http_main.c	/^static void doit(int fd) {$/;"	f	file:
+epollfd_	ss/cgi-bin/cgi_server.cpp	/^    static int         epollfd_;$/;"	m	class:CgiConn	file:
+epollfd_	ss/cgi-bin/cgi_server.cpp	/^int CgiConn::epollfd_ = -1;$/;"	m	class:CgiConn	file:
+epollfd_	ss/http_conn.cpp	/^int HttpConn::epollfd_ = -1;$/;"	m	class:HttpConn	file:
+epollfd_	ss/http_conn.hpp	/^    static int epollfd_;$/;"	m	class:HttpConn
+epollfd_	ss/ww/cgi_server.cpp	/^    static int         epollfd_;$/;"	m	class:CgiConn	file:
+epollfd_	ss/ww/cgi_server.cpp	/^int CgiConn::epollfd_ = -1;$/;"	m	class:CgiConn	file:
+epollfd_	ss/ww/process_pool.hpp	/^    int epollfd_;$/;"	m	class:ProcessPool
+err_400_form	ss/http_conn.cpp	/^const char *err_400_form  =$/;"	v
+err_400_title	ss/http_conn.cpp	/^const char *err_400_title = "Bad Request";$/;"	v
+err_403_form	ss/http_conn.cpp	/^const char *err_403_form  =$/;"	v
+err_403_title	ss/http_conn.cpp	/^const char *err_403_title = "Forbidden";$/;"	v
+err_404_form	ss/http_conn.cpp	/^const char *err_404_form  =$/;"	v
+err_404_title	ss/http_conn.cpp	/^const char *err_404_title = "Not Found";$/;"	v
+err_500_form	ss/http_conn.cpp	/^const char *err_500_form  =$/;"	v
+err_500_title	ss/http_conn.cpp	/^const char *err_500_title = "Internal Error";$/;"	v
+file_addr_	ss/http_conn.hpp	/^    char               *file_addr_;$/;"	m	class:HttpConn
+file_stat_	ss/http_conn.hpp	/^    struct stat        file_stat_;$/;"	m	class:HttpConn	typeref:struct:HttpConn::stat
 get_dynamic	doc/dir/back_main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
 get_dynamic	doc/dir/main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs) $/;"	f
-get_dynamic	main.c	/^void get_dynamic(int fd, char *filename, char *cgiargs)$/;"	f
-get_filetype	doc/back.c	/^void get_filetype(char *filename, char *filetype) $/;"	f
+get_dynamic	http_main.c	/^void get_dynamic(int fd, char *filename, char *cgi_args) {$/;"	f
 get_filetype	doc/dir/back_main.c	/^static void get_filetype(const char *filename, char *filetype) $/;"	f	file:
 get_filetype	doc/dir/main.c	/^void get_filetype(char *filename, char *filetype) $/;"	f
-get_filetype	main.c	/^static void get_filetype(const char *filename, char *filetype)$/;"	f	file:
-get_requesthdrs	doc/back.c	/^void get_requesthdrs(rio_t *rp) $/;"	f
+get_filetype	http_main.c	/^static void get_filetype(const char *filename, char *filetype) {$/;"	f	file:
 get_requesthdrs	doc/dir/back_main.c	/^static void get_requesthdrs(rio_t *rp) $/;"	f	file:
 get_requesthdrs	doc/dir/main.c	/^void get_requesthdrs(rio_t *rp) $/;"	f
-get_requesthdrs	main.c	/^static void get_requesthdrs(rio_t *rp)$/;"	f	file:
+get_requesthdrs	http_main.c	/^static void get_requesthdrs(rio_t *rp) {$/;"	f	file:
 getconfig	parse_config.c	/^static char* getconfig(const char* name)$/;"	f	file:
 getfp	parse_config.c	/^static FILE *getfp(char *path)$/;"	f	file:
 getmonth	log.c	/^static int getmonth(struct tm* local)   \/\/ return month index ,eg. Oct->10$/;"	f	file:
 handler_t	wrap.h	/^typedef void handler_t(int);$/;"	t
-https_getlength	doc/back.c	/^void https_getlength(char* buf,int* length)$/;"	f
+host_	ss/http_conn.hpp	/^    char               *host_;$/;"	m	class:HttpConn
 https_getlength	doc/dir/back_main.c	/^static void https_getlength(char* buf,int* length)$/;"	f	file:
-https_getlength	main.c	/^static void https_getlength(char* buf,int* length)$/;"	f	file:
 httpspostdata	doc/dir/back_main.c	/^static char httpspostdata[MAXLINE];$/;"	v	file:
-httpspostdata	main.c	/^static char httpspostdata[MAXLINE];$/;"	v	file:
+idx_	ss/ww/process_pool.hpp	/^    int idx_;$/;"	m	class:ProcessPool
 init_daemon	daemon_init.c	/^void init_daemon(void)$/;"	f
 initlog	log.c	/^void initlog(const char* logp)$/;"	f
+instance_	ss/ww/process_pool.hpp	/^    static ProcessPool<T> *instance_;$/;"	m	class:ProcessPool
+instance_	ss/ww/process_pool.hpp	/^ProcessPool<T> *ProcessPool<T>::instance_ = nullptr;$/;"	m	class:ProcessPool
 ipadd_to_longlong	secure_access.c	/^static long long ipadd_to_longlong(const char *ip)$/;"	f	file:
-isShowdir	doc/back.c	/^static int isShowdir=1;$/;"	v	file:
 isShowdir	doc/dir/back_main.c	/^static int isShowdir=1;$/;"	v	file:
 isShowdir	doc/dir/main.c	/^static int isShowdir=1;$/;"	v	file:
-isShowdir	main.c	/^static int isShowdir=1;$/;"	v	file:
 is_show_dir	http_main.c	/^static int is_show_dir = 1;$/;"	v	file:
-ishttps	doc/back.c	/^static int ishttps=0;$/;"	v	file:
 ishttps	doc/dir/back_main.c	/^static int ishttps=0;$/;"	v	file:
-ishttps	main.c	/^static int  ishttps=0;$/;"	v	file:
+iv_	ss/http_conn.hpp	/^    struct             iovec iv_[2];$/;"	m	class:HttpConn	typeref:struct:HttpConn::iovec
+iv_count_	ss/http_conn.hpp	/^    int                iv_count_;$/;"	m	class:HttpConn
+linger_	ss/http_conn.hpp	/^    bool               linger_;$/;"	m	class:HttpConn
+listenfd_	ss/ww/process_pool.hpp	/^    int listenfd_;$/;"	m	class:ProcessPool
 logfp	log.c	/^FILE* logfp=NULL;$/;"	v
 main	cgi-bin/getAuth.c	/^int main(void) {$/;"	f
 main	cgi-bin/postAuth.c	/^int main(void) {$/;"	f
-main	doc/back.c	/^int main(int argc, char **argv) $/;"	f
 main	doc/dir/back_main.c	/^int main(int argc, char **argv) $/;"	f
 main	doc/dir/main.c	/^int main(int argc, char **argv) $/;"	f
 main	http_main.c	/^int main(int argc, char *argv[]) {$/;"	f
-main	main.c	/^int main(int argc, char **argv)$/;"	f
+main	ss/cgi-bin/cgi_server.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	ss/cgi-bin/get_auth.cpp	/^int main(void) {$/;"	f
+main	ss/cgi-bin/post_auth.cpp	/^int main() {$/;"	f
+main	ss/main.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	ss/ww/cgi_server.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+max_event_num	ss/main.cpp	/^constexpr int max_event_num = 10000;$/;"	v
+max_fd	ss/main.cpp	/^constexpr int max_fd = 65536;$/;"	v
+max_requests_	ss/thread_pool.hpp	/^    int             max_requests_;   \/\/ 请求队列中允许的最大请求数$/;"	m	class:ThreadPool
+method_	ss/http_conn.hpp	/^    Method             method_;$/;"	m	class:HttpConn
+mutex_	ss/locker.hpp	/^    pthread_mutex_t mutex_;$/;"	m	class:CondLocker
+mutex_	ss/locker.hpp	/^    pthread_mutex_t mutex_;$/;"	m	class:MutexLocker
 obj	Makefile	/^obj=$(patsubst %.c, %.o, $(src))$/;"	m
+ok_200_title	ss/http_conn.cpp	/^const char *ok_200_title  = "OK";$/;"	v
 open_clientfd	wrap.c	/^int open_clientfd(char *hostname, int port)$/;"	f
 open_listenfd	wrap.c	/^int open_listenfd(int port)$/;"	f
 parse_option	parse_option.c	/^void parse_option(int argc,char **argv,char* d,char** portp,char **logp,char** sslp,char* dossl)$/;"	f
-parse_uri	doc/back.c	/^int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f
 parse_uri	doc/dir/back_main.c	/^static int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f	file:
 parse_uri	doc/dir/main.c	/^int parse_uri(char *uri, char *filename, char *cgiargs) $/;"	f
-parse_uri	main.c	/^static int parse_uri(char *uri, char *filename, char *cgiargs)$/;"	f	file:
-post_dynamic	doc/back.c	/^void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f
+parse_uri	http_main.c	/^static int parse_uri(char *uri, char *filename, char *cgi_args) {$/;"	f	file:
+pid_	ss/ww/process_pool.hpp	/^    pid_t pid_;$/;"	m	class:Process
+pipefd_	ss/ww/process_pool.hpp	/^    int   pipefd_[2];$/;"	m	class:Process
 post_dynamic	doc/dir/back_main.c	/^static void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f	file:
 post_dynamic	doc/dir/main.c	/^void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f
-post_dynamic	main.c	/^static void post_dynamic(int fd, char *filename, int contentLength,rio_t *rp)$/;"	f	file:
-post_requesthdrs	doc/back.c	/^void post_requesthdrs(rio_t *rp,int *length) $/;"	f
+post_dynamic	http_main.c	/^static void post_dynamic(int fd, char *filename, int content_length, rio_t *rp) {$/;"	f	file:
 post_requesthdrs	doc/dir/back_main.c	/^static void post_requesthdrs(rio_t *rp,int *length) $/;"	f	file:
 post_requesthdrs	doc/dir/main.c	/^void post_requesthdrs(rio_t *rp,int *length) $/;"	f
-post_requesthdrs	main.c	/^static void post_requesthdrs(rio_t *rp,int *length)$/;"	f	file:
-rio_buf	wrap.h	/^    char rio_buf[RIO_BUFSIZE]; \/* internal buffer *\/$/;"	m	struct:__anon1
-rio_bufptr	wrap.h	/^    char *rio_bufptr;          \/* next unread byte in internal buf *\/$/;"	m	struct:__anon1
-rio_cnt	wrap.h	/^    int rio_cnt;               \/* unread bytes in internal buf *\/$/;"	m	struct:__anon1
-rio_fd	wrap.h	/^    int rio_fd;                \/* descriptor for this internal buf *\/$/;"	m	struct:__anon1
+post_requesthdrs	http_main.c	/^static void post_requesthdrs(rio_t *rp, int *length) {$/;"	f	file:
+process_number_	ss/ww/process_pool.hpp	/^    int process_number_;$/;"	m	class:ProcessPool
+queue_locker_	ss/thread_pool.hpp	/^    MutexLocker     queue_locker_;   \/\/ 保护请求队列的互斥锁$/;"	m	class:ThreadPool
+queue_stat_	ss/thread_pool.hpp	/^    SemLocker       queue_stat_;     \/\/ 是否有任务需要处理$/;"	m	class:ThreadPool
+read_buf_	ss/http_conn.hpp	/^    char               read_buf_[READ_BUF_SIZE];$/;"	m	class:HttpConn
+read_idx_	ss/cgi-bin/cgi_server.cpp	/^    int                read_idx_;$/;"	m	class:CgiConn	file:
+read_idx_	ss/http_conn.hpp	/^    int                read_idx_;$/;"	m	class:HttpConn
+read_idx_	ss/ww/cgi_server.cpp	/^    int                read_idx_;$/;"	m	class:CgiConn	file:
+real_file_	ss/http_conn.hpp	/^    char               real_file_[FILENAME_LEN];$/;"	m	class:HttpConn
+rio_buf	wrap.h	/^    char  rio_buf[RIO_BUFSIZE]; \/* internal buffer *\/$/;"	m	struct:__anon1
+rio_bufptr	wrap.h	/^    char *rio_bufptr;           \/* next unread byte in internal buf *\/$/;"	m	struct:__anon1
+rio_cnt	wrap.h	/^    int   rio_cnt;              \/* unread bytes in internal buf *\/$/;"	m	struct:__anon1
+rio_fd	wrap.h	/^    int   rio_fd;               \/* descriptor for this internal buf *\/$/;"	m	struct:__anon1
 rio_read	wrap.c	/^static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t n)$/;"	f	file:
 rio_readinitb	wrap.c	/^void rio_readinitb(rio_t *rp, int fd)$/;"	f
 rio_readlineb	wrap.c	/^ssize_t rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)$/;"	f
@@ -160,34 +327,49 @@ rio_readnb	wrap.c	/^ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t n)$/;"	f
 rio_t	wrap.h	/^} rio_t;$/;"	t	typeref:struct:__anon1
 rio_writen	wrap.c	/^ssize_t rio_writen(int fd, void *usrbuf, size_t n)$/;"	f
 run	webserver.sh	/^run()$/;"	f
-serve_dir	doc/back.c	/^void serve_dir(int fd,char *filename)$/;"	f
+sem_	ss/locker.hpp	/^    sem_t sem_;$/;"	m	class:SemLocker
 serve_dir	doc/dir/back_main.c	/^static void serve_dir(int fd,char *filename)$/;"	f	file:
 serve_dir	doc/dir/main.c	/^void serve_dir(int fd,char *filename)$/;"	f
-serve_dir	main.c	/^static void serve_dir(int fd,char *filename)$/;"	f	file:
-serve_static	doc/back.c	/^void serve_static(int fd, char *filename, int filesize) $/;"	f
+serve_dir	http_main.c	/^static void serve_dir(int fd, char *filename) {$/;"	f	file:
 serve_static	doc/dir/back_main.c	/^static void serve_static(int fd, char *filename, int filesize) $/;"	f	file:
 serve_static	doc/dir/main.c	/^void serve_static(int fd, char *filename, int filesize) $/;"	f
-serve_static	main.c	/^static void serve_static(int fd, char *filename, int filesize)$/;"	f	file:
+serve_static	http_main.c	/^static void serve_static(int fd, char *filename, int filesize) {$/;"	f	file:
 sigChldHandler	doc/dir/back_main.c	/^static void sigChldHandler(int signo)$/;"	f	file:
-sigChldHandler	main.c	/^static void sigChldHandler(int signo)$/;"	f	file:
+sig_chld_handler	http_main.c	/^static void sig_chld_handler(int signo) {$/;"	f	file:
+sig_pipefd	ss/ww/process_pool.hpp	/^static int sig_pipefd[2];$/;"	v
+sockfd_	ss/cgi-bin/cgi_server.cpp	/^    int                sockfd_;$/;"	m	class:CgiConn	file:
+sockfd_	ss/http_conn.hpp	/^    int                sockfd_;$/;"	m	class:HttpConn
+sockfd_	ss/ww/cgi_server.cpp	/^    int                sockfd_;$/;"	m	class:CgiConn	file:
 src	Makefile	/^src=$(wildcard *.c)$/;"	m
-ssl	doc/back.c	/^static SSL* ssl;$/;"	v	file:
 ssl	doc/dir/back_main.c	/^static SSL* ssl;$/;"	v	file:
-ssl	main.c	/^static SSL* ssl;$/;"	v	file:
-ssl_ctx	doc/back.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
 ssl_ctx	doc/dir/back_main.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
-ssl_ctx	main.c	/^static SSL_CTX* ssl_ctx;$/;"	v	file:
-ssl_init	doc/back.c	/^void ssl_init(void)$/;"	f
 ssl_init	doc/dir/back_main.c	/^static void ssl_init(void)$/;"	f	file:
-ssl_init	main.c	/^static void ssl_init(void)$/;"	f	file:
 start	webserver.sh	/^start()$/;"	f
+start_line_	ss/http_conn.hpp	/^    int                start_line_;$/;"	m	class:HttpConn
 status	webserver.sh	/^status()$/;"	f
 stop	webserver.sh	/^stop()$/;"	f
+stop_	ss/thread_pool.hpp	/^    bool            stop_;           \/\/ 是否结束线程$/;"	m	class:ThreadPool
+stop_	ss/ww/process_pool.hpp	/^    int stop_;$/;"	m	class:ProcessPool
+sub_process_	ss/ww/process_pool.hpp	/^    Process *sub_process_;$/;"	m	class:ProcessPool
+thread_number_	ss/thread_pool.hpp	/^    int             thread_number_;  \/\/ 线程中的线程数$/;"	m	class:ThreadPool
+threads_	ss/thread_pool.hpp	/^    pthread_t       *threads_;       \/\/ 描述线程池的数组，其大小为 thread_number$/;"	m	class:ThreadPool
 timeModify	log.c	/^char* timeModify(time_t timeval,char *time)$/;"	f
 unix_error	wrap.c	/^void unix_error(char *msg) \/* unix-style error *\/$/;"	f
+url_	ss/http_conn.hpp	/^    char               *url_;$/;"	m	class:HttpConn
 usage	parse_option.c	/^static void usage(void)$/;"	f	file:
+user_count_	ss/http_conn.cpp	/^int HttpConn::user_count_ = 0;$/;"	m	class:HttpConn	file:
+user_count_	ss/http_conn.hpp	/^    static int user_count_;$/;"	m	class:HttpConn
 version	parse_option.c	/^static void version(void)$/;"	f	file:
+version_	ss/http_conn.hpp	/^    char               *version_;$/;"	m	class:HttpConn
+work_queue_	ss/thread_pool.hpp	/^    std::list<T*>   work_queue_;     \/\/ 请求队列$/;"	m	class:ThreadPool
 writePid	doc/dir/back_main.c	/^static void writePid(int option)$/;"	f	file:
-writePid	main.c	/^static void writePid(int option)$/;"	f	file:
+write_buf_	ss/http_conn.hpp	/^    char               write_buf_[WRITE_BUF_SIZE];$/;"	m	class:HttpConn
+write_idx_	ss/http_conn.hpp	/^    int                write_idx_;$/;"	m	class:HttpConn
+write_pid	http_main.c	/^static void write_pid(int option) {$/;"	f	file:
 writelog	log.c	/^void writelog(const char* buf)$/;"	f
 writetime	log.c	/^void writetime()$/;"	f
+~CondLocker	ss/locker.hpp	/^    ~CondLocker() {$/;"	f	class:CondLocker
+~MutexLocker	ss/locker.hpp	/^    ~MutexLocker() { pthread_mutex_destroy(&mutex_); }$/;"	f	class:MutexLocker
+~ProcessPool	ss/ww/process_pool.hpp	/^    ~ProcessPool() { delete[] sub_process_; }$/;"	f	class:ProcessPool
+~SemLocker	ss/locker.hpp	/^    ~SemLocker() { sem_destroy(&sem_); }$/;"	f	class:SemLocker
+~ThreadPool	ss/thread_pool.hpp	/^ThreadPool<T>::~ThreadPool() {$/;"	f	class:ThreadPool

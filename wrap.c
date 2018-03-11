@@ -524,8 +524,9 @@ static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t n)
 
     /* Copy min(n, rp->rio_cnt) bytes from internal buf to user buf */
     cnt = n;
-    if (rp->rio_cnt < n)
+    if (rp->rio_cnt < n) {
         cnt = rp->rio_cnt;
+    }
     memcpy(usrbuf, rp->rio_bufptr, cnt);
     rp->rio_bufptr += cnt;
     rp->rio_cnt -= cnt;
@@ -535,19 +536,16 @@ static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t n)
 /*
  * rio_readinitb - Associate a descriptor with a read buffer and reset buffer
  */
-/* $begin rio_readinitb */
 void rio_readinitb(rio_t *rp, int fd)
 {
     rp->rio_fd = fd;
     rp->rio_cnt = 0;
     rp->rio_bufptr = rp->rio_buf;
 }
-/* $end rio_readinitb */
 
 /*
  * rio_readnb - Robustly read n bytes (buffered)
  */
-/* $begin rio_readnb */
 ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t n)
 {
     size_t nleft = n;
@@ -568,12 +566,10 @@ ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t n)
     }
     return (n - nleft);         /* return >= 0 */
 }
-/* $end rio_readnb */
 
 /*
  * rio_readlineb - robustly read a text line (buffered)
  */
-/* $begin rio_readlineb */
 ssize_t rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)
 {
     int n, rc;
@@ -595,7 +591,6 @@ ssize_t rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen)
     *bufp = 0;
     return n;
 }
-/* $end rio_readlineb */
 
 /**********************************
  * Wrappers for robust I/O routines

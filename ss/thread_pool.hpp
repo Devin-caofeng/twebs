@@ -31,8 +31,8 @@ private:
 private:
     int             thread_number_;  // 线程中的线程数
     int             max_requests_;   // 请求队列中允许的最大请求数
-    pthread_t      *threads_;        // 描述线程池的数组，其大小为 thread_number
-    std::list<T *>  work_queue_;     // 请求队列
+    pthread_t       *threads_;       // 描述线程池的数组，其大小为 thread_number
+    std::list<T*>   work_queue_;     // 请求队列
     MutexLocker     queue_locker_;   // 保护请求队列的互斥锁
     SemLocker       queue_stat_;     // 是否有任务需要处理
     bool            stop_;           // 是否结束线程

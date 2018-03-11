@@ -76,17 +76,17 @@ void HttpConn::Init(int sockfd, const struct sockaddr_in &addr) {
 }
 
 void HttpConn::Init() {
-    check_state_ = CHECK_STATE_REQUESTLINE;
-    linger_ = false;
-    method_ = GET;
-    url_    = nullptr;
-    version_ = nullptr;
+    check_state_    = CHECK_STATE_REQUESTLINE;
+    linger_         = false;
+    method_         = GET;
+    url_            = nullptr;
+    version_        = nullptr;
     content_length_ = 0;
-    host_ = nullptr;
-    start_line_ = 0;
-    checked_idx_ = 0;
-    read_idx_ = 0;
-    write_idx_ = 0;
+    host_           = nullptr;
+    start_line_     = 0;
+    checked_idx_    = 0;
+    read_idx_       = 0;
+    write_idx_      = 0;
     memset(read_buf_, '\0', READ_BUF_SIZE);
     memset(write_buf_, '\0', WRITE_BUF_SIZE);
     memset(real_file_, '\0', FILENAME_LEN);
@@ -96,7 +96,7 @@ void HttpConn::Init() {
  * 从状态机
  */
 HttpConn::LineStatus HttpConn::ParseLine() {
-    for ( ; checked_idx_ < read_idx_; ++checked_idx_ ) {
+    for ( ; checked_idx_ < read_idx_; ++checked_idx_) {
         char temp = read_buf_[checked_idx_];
         if (temp == '\r') {
             if ((checked_idx_ + 1) == read_idx_) {
@@ -188,7 +188,7 @@ HttpConn::HttpCode HttpConn::ParseRequestLine(char *text) {
 }
 
 /*
- * 即系 HTTP 请求的一个头部信息
+ * 解析 HTTP 请求的一个头部信息
  */
 HttpConn::HttpCode HttpConn::ParseHeaders(char *text) {
     // 遇到空行，表示头部字段解析完毕
@@ -396,9 +396,7 @@ bool HttpConn::AddStatusLine(int status, const char *title) {
 }
 
 bool HttpConn::AddHeaders(int content_len) {
-    AddContentLength(content_len);
-    AddLinger();
-    AddBlankLine();
+    return AddContentLength(content_len) && AddLinger() && AddBlankLine();
 }
 
 bool HttpConn::AddContentLength(int content_len) {

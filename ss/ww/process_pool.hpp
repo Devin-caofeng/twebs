@@ -245,19 +245,19 @@ int ProcessPool<T>::ProcessSigInChild() {
     else {
         for (int i = 0; i < ret; ++i) {
             switch (signals[i]) {
-                case SIGCHLD:
-                    pid_t pid;
-                    int stat;
-                    while ((pid = waitpid(-1, &stat, WNOHANG)) > 0) {
-                        continue;
-                    }
-                    break;
-                case SIGTERM:
-                case SIGINT:
-                    stop_ = true;
-                    break;
-                default:
-                    break;
+            case SIGCHLD:
+                pid_t pid;
+                int stat;
+                while ((pid = waitpid(-1, &stat, WNOHANG)) > 0) {
+                    continue;
+                }
+                break;
+            case SIGTERM:
+            case SIGINT:
+                stop_ = true;
+                break;
+            default:
+                break;
             }
         }
     }
@@ -344,9 +344,7 @@ template <typename T>
 void ProcessPool<T>::ProcessSigInParent() {
     char signals[1024];
     int ret = recv(sig_pipefd[0], signals, sizeof(signals), 0);
-    if (ret <= 0) {
-        return;
-    }
+    if (ret <= 0) return;
 
     for (int i = 0; i < ret; ++i) {
         switch (signals[i]) {

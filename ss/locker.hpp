@@ -70,7 +70,7 @@ public:
 
 private:
     pthread_mutex_t mutex_;
-    pthread_cond_t cond_;
+    pthread_cond_t  cond_;
 };
 
 #endif  // LOCKER_HPP_
