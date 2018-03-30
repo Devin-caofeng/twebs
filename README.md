@@ -3,7 +3,6 @@ and to serve dynamic content by running CGI programs out of ./cgi-bin.
 
 twebs provides following functions:
 - provide GET/POST method to view static content and run cgi script
-- provide HTTP and HTTPS connection
 - provide dircetory view function
 - provide some access control based by ip address
 - provide easy logging function
